@@ -1,4 +1,3 @@
-export function Form() {
     const [questions] = useState([
       {
         id: 1,
@@ -49,6 +48,7 @@ export function Form() {
         label: "Seu nível de Intuitividade",
       },
     ]);
+    
     const [answers, setAnswers] = useState([
       {
         id: 1,
@@ -111,7 +111,11 @@ export function Form() {
         priority: 5,
       },
     ]);
-}
+
+
+const [priorityList, setPriorityList] = useState([1, 2, 3, 4]);
+const [isModalOpen, setIsModalOpen] = useState(false);
+const [armor, setarmor] = useState(null);
 
 function countInversions(arr) {
   if (arr.length <= 1) {
