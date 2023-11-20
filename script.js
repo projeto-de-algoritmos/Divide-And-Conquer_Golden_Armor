@@ -112,3 +112,65 @@ export function Form() {
       },
     ]);
 }
+
+function countInversions(arr) {
+  if (arr.length <= 1) {
+      return {
+          count: 0,
+          sortedArray: arr
+      };
+  }
+
+  // Divide a lista ao meio
+  const meio = Math.floor(arr.length / 2);
+  const esquerda = arr.slice(0, meio);
+  const direita = arr.slice(meio);
+
+  // Chama recursivamente para as duas metades
+  const invEsquerda = countInversions(esquerda);
+  const invDireita = countInversions(direita);
+
+  // Combina as duas metades ordenadas e conta as inversões
+  const mergeResult = mergeAndCountInversions(invEsquerda.sortedArray, invDireita.sortedArray);
+
+  // Retorna o total de inversões
+  const totalInversoes = invEsquerda.count + invDireita.count + mergeResult.count;
+  return {
+      count: totalInversoes,
+      sortedArray: mergeResult.sortedArray
+  };
+}
+
+function mergeAndCountInversions(esquerda, direita) {
+  let inversions = 0;
+  let i = 0;
+  let j = 0;
+  const resultado = [];
+
+  while (i < esquerda.length && j < direita.length) {
+      if (esquerda[i] <= direita[j]) {
+          resultado.push(esquerda[i]);
+          i++;
+      } else {
+          resultado.push(direita[j]);
+          // Se o elemento da metade direita é menor, então é uma inversão
+          inversions += esquerda.length - i;
+          j++;
+      }
+  }
+
+  // Adiciona os elementos restantes das duas metades
+  resultado.push(...esquerda.slice(i));
+  resultado.push(...direita.slice(j));
+
+  return {
+      count: inversions,
+      sortedArray: resultado
+  };
+}
+
+// Exemplo de uso:
+const lista = [1, 3, 5, 2, 4, 6];
+const resultado = countInversions(lista);
+console.log(`Número de inversões: ${resultado.count}`);
+console.log(`Lista ordenada: ${resultado.sortedArray}`);
