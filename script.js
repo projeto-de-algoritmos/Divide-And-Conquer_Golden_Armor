@@ -1,116 +1,144 @@
-    const labels = ([
-      {
-        id: 1,
-        label: "Seu nível de Determinação",
-      },
-      {
-        id: 2,
-        label: "Seu nível Lealdade",
-      },   
-      {
-        id: 3,
-        label: "Seu nível de Intelecto?",
-      },
-      {
-        id: 4,
-        label: "Seu nível de Emocional",
-      },
-      {
-        id: 5,
-        label: "Seu nível de Coragem",
-      },
-      {
-        id: 6,
-        label: "Seu nível de Introspectividade",
-      },
-      {
-        id: 7,
-        label: "Seu nível de Paciência",
-      },
-      {
-        id: 8,
-        label: "Seu nível de Planejamento",
-      },
-      {
-        id: 9,
-        label: "Seu nível de Otimismo",
-      },
-      {
-        id: 10,
-        label: "Seu nível de Disciplina",
-      },
-      {
-        id: 11,
-        label: "Seu nível de Originalidade",
-      },
-      {
-        id: 12,
-        label: "Seu nível de Intuitividade",
-      },
-    ]);
-    
-    const [answers, setAnswers] = ([
-      {
-        id: 1,
-        label: "Determinação",
-        priority: 5,
-      },
-      {
-        id: 2,
-        label: "Lealdade",
-        priority: 5,
-      },
-      {
-        id: 3,
-        label: "Intelecto",
-        priority: 5,
-      },
-      {
-        id: 4,
-        label: "Emocional",
-        priority: 5,
-      },
-      {
-        id: 5,
-        label: "Coragem",
-        priority: 5,
-      },
-      {
-        id: 6,
-        label: "Introspectividade",
-        priority: 5,
-      },
-      {
-        id: 7,
-        label: "Paciência",
-        priority: 5,
-      },
-      {
-        id: 8,
-        label: "Planejamento",
-        priority: 5,
-      },
-      {
-        id: 9,
-        label: "Otimismo",
-        priority: 5,
-      },
-      {
-        id: 10,
-        label: "Disciplina",
-        priority: 5,
-      },
-      {
-        id: 11,
-        label: "Originalidade",
-        priority: 5,
-      },
-      {
-        id: 12,
-        label: "Intuitividade",
-        priority: 5,
-      },
-    ]);
+const labels = ([
+  {
+    id: 1,
+    label: "Seu nível de Determinação",
+  },
+  {
+    id: 2,
+    label: "Seu nível Lealdade",
+  },
+  {
+    id: 3,
+    label: "Seu nível de Intelecto?",
+  },
+  {
+    id: 4,
+    label: "Seu nível de Emocional",
+  },
+  {
+    id: 5,
+    label: "Seu nível de Coragem",
+  },
+  {
+    id: 6,
+    label: "Seu nível de Introspectividade",
+  },
+  {
+    id: 7,
+    label: "Seu nível de Paciência",
+  },
+  {
+    id: 8,
+    label: "Seu nível de Planejamento",
+  },
+  {
+    id: 9,
+    label: "Seu nível de Otimismo",
+  },
+  {
+    id: 10,
+    label: "Seu nível de Disciplina",
+  },
+  {
+    id: 11,
+    label: "Seu nível de Originalidade",
+  },
+  {
+    id: 12,
+    label: "Seu nível de Intuitividade",
+  },
+]);
+
+// Função para adicionar a lista de objetos ao elemento HTML
+function displayFormList() {
+  const formListElement = document.getElementById('formList');
+
+  labels.forEach(label => {
+    const formGroup = document.createElement('div');
+    formGroup.classList.add('form-group');
+
+    const labelElement = document.createElement('label');
+    labelElement.textContent = label.label;
+
+    const inputElement = document.createElement('input');
+    inputElement.type = 'range';
+    inputElement.classList.add('form-control-range');
+    inputElement.id = `formControlRange${label.id}`;
+    inputElement.min = 0;
+    inputElement.max = 5;
+
+    formGroup.appendChild(labelElement);
+    formGroup.appendChild(inputElement);
+    formListElement.appendChild(formGroup);
+  });
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  displayFormList();
+});
+
+const [answers, setAnswers] = ([
+  {
+    id: 1,
+    label: "Determinação",
+    priority: 5,
+  },
+  {
+    id: 2,
+    label: "Lealdade",
+    priority: 5,
+  },
+  {
+    id: 3,
+    label: "Intelecto",
+    priority: 5,
+  },
+  {
+    id: 4,
+    label: "Emocional",
+    priority: 5,
+  },
+  {
+    id: 5,
+    label: "Coragem",
+    priority: 5,
+  },
+  {
+    id: 6,
+    label: "Introspectividade",
+    priority: 5,
+  },
+  {
+    id: 7,
+    label: "Paciência",
+    priority: 5,
+  },
+  {
+    id: 8,
+    label: "Planejamento",
+    priority: 5,
+  },
+  {
+    id: 9,
+    label: "Otimismo",
+    priority: 5,
+  },
+  {
+    id: 10,
+    label: "Disciplina",
+    priority: 5,
+  },
+  {
+    id: 11,
+    label: "Originalidade",
+    priority: 5,
+  },
+  {
+    id: 12,
+    label: "Intuitividade",
+    priority: 5,
+  },
+]);
 
 
 const [priorityList, setPriorityList] = ([1, 2, 3, 4]);
@@ -120,10 +148,10 @@ const [armor, setArmor] = [null];
 
 function countInversions(arr) {
   if (arr.length <= 1) {
-      return {
-          count: 0,
-          sortedArray: arr
-      };
+    return {
+      count: 0,
+      sortedArray: arr
+    };
   }
 
   // Divide a lista ao meio
@@ -141,8 +169,8 @@ function countInversions(arr) {
   // Retorna o total de inversões
   const totalInversoes = invEsquerda.count + invDireita.count + mergeResult.count;
   return {
-      count: totalInversoes,
-      sortedArray: mergeResult.sortedArray
+    count: totalInversoes,
+    sortedArray: mergeResult.sortedArray
   };
 }
 
@@ -153,15 +181,15 @@ function mergeAndCountInversions(esquerda, direita) {
   const resultado = [];
 
   while (i < esquerda.length && j < direita.length) {
-      if (esquerda[i] <= direita[j]) {
-          resultado.push(esquerda[i]);
-          i++;
-      } else {
-          resultado.push(direita[j]);
-          // Se o elemento da metade direita é menor, então é uma inversão
-          inversions += esquerda.length - i;
-          j++;
-      }
+    if (esquerda[i] <= direita[j]) {
+      resultado.push(esquerda[i]);
+      i++;
+    } else {
+      resultado.push(direita[j]);
+      // Se o elemento da metade direita é menor, então é uma inversão
+      inversions += esquerda.length - i;
+      j++;
+    }
   }
 
   // Adiciona os elementos restantes das duas metades
@@ -169,8 +197,8 @@ function mergeAndCountInversions(esquerda, direita) {
   resultado.push(...direita.slice(j));
 
   return {
-      count: inversions,
-      sortedArray: resultado
+    count: inversions,
+    sortedArray: resultado
   };
 }
 
@@ -185,7 +213,7 @@ console.log(`Lista ordenada: ${resultado.sortedArray}`);
 const res = resultado.count;
 
 //tradutor de iversões para armaduras
-if (res >= 0 && res <=5) {
+if (res >= 0 && res <= 5) {
   console.log("Armadura de Áries");
 } else if (res > 5 && res <= 10) {
   console.log("Armadura de Touro");
