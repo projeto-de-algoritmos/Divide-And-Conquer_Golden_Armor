@@ -1,4 +1,4 @@
-    const [questions] = useState([
+    const labels = ([
       {
         id: 1,
         label: "Seu nível de Determinação",
@@ -49,7 +49,7 @@
       },
     ]);
     
-    const [answers, setAnswers] = useState([
+    const [answers, setAnswers] = ([
       {
         id: 1,
         label: "Determinação",
@@ -113,8 +113,8 @@
     ]);
 
 
-const [priorityList, setPriorityList] = useState([1, 2, 3, 4]);
-const [isModalOpen, setIsModalOpen] = useState(false);
+const [priorityList, setPriorityList] = ([1, 2, 3, 4]);
+const [isModalOpen, setIsModalOpen] = false;
 const [armor, setarmor] = useState(null);
 
 function countInversions(arr) {
