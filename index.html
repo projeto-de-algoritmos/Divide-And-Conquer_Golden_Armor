@@ -34,17 +34,49 @@
 
         .formularios {
             position: relative;
-            z-index: 100;
+            z-index: 2;
             background-color: aliceblue;
             padding: 15px;
         }
+
+        .copyrigth {
+            position: relative;
+            z-index: 2;
+        }
+
+        .form-group {
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            margin-bottom: 20px;
+        }
+
+        #calcularButton {
+            margin-top: 10px;
+        }
+
+        .hidden {
+            display: none;
+        }
+
+        .centered-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+            z-index: 3;
+            max-width: 90%;
+        }
+
     </style>
 
 </head>
 
 <body class="bg-dark">
     <nav class=" navbar navbar-expand-lg navbar navbar-dark bg-dark ">
-        <a class=" navbar-brand" href="#">Golden Armor</a>
+        <a class=" navbar-brand" href="https://projeto-de-algoritmos.github.io/Divide-And-Conquer_Golden_Armor/">Golden Armor</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado"
             aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
@@ -73,9 +105,11 @@
             <div class="row">
                 <div class="col-sm">
                 </div>
-                <div class="col-sm formularios">
+                <div class="col-sm formularios ">
+                    <h5>Selecione o seu nível de cada característica</h5>
                     <form id="formList">
                     </form>
+                    <button id="calcularButton" class="btn btn-primary" onclick="calcularValores()">Calcular</button>
                 </div>
                 <div class="col-sm">
                     <div class="your-div fixed-bottom">
@@ -84,13 +118,16 @@
                 </div>
             </div>
         </div>
+
+        <h3 class="centered-container" id="armorTitle"></h3>
+        <div class="armorImageContainer centered-container" id="armorImageContainer"></div>
     </div>
 
 
 
     <script src="./script.js"></script>
 
-    <footer class="text-center mt-3 mb-3 text-light">
+    <footer class="copyrigth text-center mt-3 mb-3 text-light">
         <p>&copy <a href="https://github.com/charles-serafim">Charles Serafim</a> && <a
                 href="https://github.com/thiago-Cerq">Thiago Cerqueira</a></p>
     </footer>
