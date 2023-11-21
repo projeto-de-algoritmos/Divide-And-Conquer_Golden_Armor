@@ -14,7 +14,7 @@ const armors = ([
   {
     "id": 3,
     "name": "Armadura de Gêmeos",
-    "img": "img/armadura gemeos",
+    "img": "img/armadura_gemeos",
     "priorityList": [3, 3, 5, 4, 3, 4, 2, 5, 4, 3, 5, 4]
   },
   {

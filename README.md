@@ -1,45 +1,45 @@
-**!! Atenção: Renomeie o seu repositório para (Tema)_(NomeDoProjeto). !!** 
-
-Temas:
- - Grafos1
- - Grafos2
- - PD
- - D&C
- - Greed
- - Final 
- 
- **!! *Não coloque os nomes dos alunos no título do repositório*. Exemplo de título correto: Grafos2_Labirinto-do-Minotauro !!**
- 
- (Apague essa seção)
-
-# NomedoProjeto
+# Conquer_Golden_Armor
 
 **Número da Lista**: X<br>
-**Conteúdo da Disciplina**: XXXXXXXXXX<br>
+**Conteúdo da Disciplina**: Dividir e Conquistar<br>
 
 ## Alunos
-|Matrícula | Aluno |
-| -- | -- |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
-| xx/xxxxxx  |  xxxx xxxx xxxxx |
+
+| Matrícula | Aluno                   |
+| --------- | ----------------------- |
+| 190113596 | Charles Serafim Morais  |
+| 190117508 | Thiago Cerqueira Borges |
 
 ## Sobre 
-Descreva os objetivos do seu projeto e como ele funciona. 
+
+O objetivo deste trabalho é fornecer uma aplicação web que realize uma classificação do usuário em categorias de armaduras dos Cavaleiros do Zodíaco de acordo com os seus índices de determinados atributos. O trabalho foi realizado para a prática de algoritmos de dividir e conquistar da disciplina de Projeto de Algoritmos.
+
+
+## Vídeo de apresentação
+
+A execução do programa e explicação da aplicação dos algoritmos e código podem ser vistas através de download do [arquivo do vídeo da apresentação, constante dentro desse repositório](https://github.com/projeto-de-algoritmos/Grafos2_Amazon-Boat-Tour/blob/master/Apresenta%C3%A7%C3%A3o_Trabalho_Grafos_2_Amazon_Boat_Tour.mp4) ou no [YouTube](https://www.youtube.com/watch?v=8hWu22xi3HM).
 
 ## Screenshots
-Adicione 3 ou mais screenshots do projeto em funcionamento.
+
+Seleção de atributos
+
+![Print1](https://raw.githubusercontent.com/projeto-de-algoritmos/Divide-And-Conquer_Golden_Armor/master/img/print1.png)
+
+Armadura selecionada
+
+![Print2](https://raw.githubusercontent.com/projeto-de-algoritmos/Divide-And-Conquer_Golden_Armor/master/img/print2.png)
 
 ## Instalação 
-**Linguagem**: xxxxxx<br>
-**Framework**: (caso exista)<br>
-Descreva os pré-requisitos para rodar o seu projeto e os comandos necessários.
+
+Para rodar o projeto localmente:
+
+**Linguagem**: JavaScript <br>
+**Framework**: Bootstrap <br>
 
 ## Uso 
-Explique como usar seu projeto caso haja algum passo a passo após o comando de execução.
+A aplicação pode ser utilizada no GitHub Pages do projeto, acessível através deste [link](https://projeto-de-algoritmos.github.io/Divide-And-Conquer_Golden_Armor/).
 
-## Outros 
-Quaisquer outras informações sobre seu projeto podem ser descritas abaixo.
+Uma vez dentro da aplicação, para ver a armadura escolhida, basta seguir os seguintes passos:
 
-
-
-
+1° - Selecione uma nota na escala de 1 a 5 para o atributo.<br>
+2° - Selecione Calcular<br>
