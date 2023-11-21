@@ -2,73 +2,73 @@ const armors = ([
   {
     "id": 1,
     "name": "Armadura de Áries",
-    "img": "./img/armadura_aries",
+    "img": "img/armadura_aries",
     "priorityList": [5, 4, 3, 2, 5, 2, 1, 3, 4, 4, 3, 2]
   },
   {
     "id": 2,
     "name": "Armadura de Touro",
-    "img": "./img/armadura_touro",
+    "img": "img/armadura_touro",
     "priorityList": [4, 5, 3, 3, 4, 3, 5, 4, 3, 4, 2, 2]
   },
   {
     "id": 3,
     "name": "Armadura de Gêmeos",
-    "img": "./img/armadura gemeos",
+    "img": "img/armadura gemeos",
     "priorityList": [3, 3, 5, 4, 3, 4, 2, 5, 4, 3, 5, 4]
   },
   {
     "id": 4,
     "name": "Armadura de Câncer",
-    "img": "./img/armadura_cancer",
+    "img": "img/armadura_cancer",
     "priorityList": [4, 4, 4, 5, 3, 5, 4, 3, 3, 4, 3, 5]
   },
   {
     "id": 5,
     "name": "Armadura de Leão",
-    "img": "./img/armadura_leao",
+    "img": "img/armadura_leao",
     "priorityList": [5, 4, 3, 4, 5, 3, 2, 3, 4, 4, 4, 3]
   },
   {
     "id": 6,
     "name": "Armadura de Virgem",
-    "img": "./img/armadura_virgem",
+    "img": "img/armadura_virgem",
     "priorityList": [4, 5, 5, 3, 3, 5, 5, 5, 3, 5, 3, 4]
   },
   {
     "id": 7,
     "name": "Armadura de Libra",
-    "img": "./img/armadura_libra",
+    "img": "img/armadura_libra",
     "priorityList": [3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4]
   },
   {
     "id": 8,
     "name": "Armadura de Escorpião",
-    "img": "./img/armadura_escorpiao",
+    "img": "img/armadura_escorpiao",
     "priorityList": [5, 3, 4, 5, 5, 5, 3, 3, 3, 4, 2, 5]
   },
   {
     "id": 9,
     "name": "Armadura de Sagitário",
-    "img": "./img/armadura_sagitario",
+    "img": "img/armadura_sagitario",
     "priorityList": [5, 4, 3, 4, 5, 3, 2, 3, 5, 3, 4, 4]
   },
   {
     "id": 10,
     "name": "Armadura de Capricórnio",
-    "img": "./img/armadura_capricornio",
+    "img": "img/armadura_capricornio",
     "priorityList": [5, 4, 4, 3, 4, 4, 5, 5, 3, 5, 2, 3]
   },
   {
     "id": 11,
     "name": "Armadura de Aquário",
-    "img": "./img/armadura_aquario",
+    "img": "img/armadura_aquario",
     "priorityList": [4, 3, 5, 4, 4, 5, 4, 5, 4, 3, 5, 4]
   },
   {
     "id": 12,
     "name": "Armadura de Peixes",
-    "img": "./img/armadura_peixes",
+    "img": "img/armadura_peixes",
     "priorityList": [3, 5, 4, 5, 3, 5, 4, 3, 3, 3, 4, 5]
   }
 ]);
@@ -372,7 +372,7 @@ function displayArmorImage(armor) {
 
   if (armor) {
     const armorImage = document.createElement('img');
-    armorImage.src = `${armor.img}.jpg`; // Adapte a extensão da imagem conforme necessário
+    armorImage.src = `https://raw.githubusercontent.com/projeto-de-algoritmos/Divide-And-Conquer_Golden_Armor/master/${armor.img}.jpg`; // Adapte a extensão da imagem conforme necessário
     armorImage.alt = armor.name;
 
     const armorTitleText = document.createTextNode(armor.name);
